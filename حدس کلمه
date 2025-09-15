@@ -1,0 +1,13 @@
+import random
+word = random.choice(open("matn.txt" , "r").split())
+tries = 5
+while tries > 0:
+    guess = input("enter your guess: ")
+    if guess == word:
+        print("right!")
+        break
+    else:
+        tries -= 1
+        print("wrong,remaining trying", tries)
+if tries == 0:
+    print("you lost:", word)
