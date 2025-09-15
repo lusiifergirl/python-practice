@@ -1,0 +1,6 @@
+set1 = set(input("enter majmoe1: ").split())
+set2 = set(input("enter majmoe2: ").split())
+print("ejtemae:", set1 | set2)
+print("eshterak:", set1 & set2)
+print("tafazol:", set1 - set2)
+print("tmotegaren:", set1 ^ set2)
