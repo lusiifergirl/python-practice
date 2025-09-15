@@ -1,0 +1,7 @@
+gorbe = ["gorbe khonegi", "gorbe jangali", "gorbe vahshi"]
+sag = ["sag khonegi", "sag jangali", "sag vahshi"]
+heyvanat = gorbe + sag
+vahshi = ["gorbe jangali", "sag jangali"]
+for a in heyvanat:
+    if a in vahshi:
+        print(a, "در حال انقراض است")
