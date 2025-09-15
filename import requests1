@@ -1,0 +1,11 @@
+import requests
+from bs4 import BeautifulSoup
+
+response = requests.get("https://www.tgju.org/")
+content = response.text
+
+soup = BeautifulSoup(content, "html.parser")
+
+element = soup.find(class_="info-price")
+
+print(element.text)
