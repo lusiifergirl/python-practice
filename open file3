@@ -1,0 +1,2 @@
+with open("test.txt", "r") as file1, open("matn.txt", "w") as file2:
+    file2.writelines(reversed(file1.readlines()))
