@@ -1,0 +1,4 @@
+emtiyaz = {"ali": 12,"asgar": 8,"kiana": 15,"sanaz": 10}
+print("emtiyaz:", emtiyaz)
+barande = min(emtiyaz, key=emtiyaz.get)
+print("barande:", barande, "record:", emtiyaz[barande])
