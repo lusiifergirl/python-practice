@@ -1,0 +1,9 @@
+card = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+guess = input("enter 10 number: ").split()
+guess = [int(x) for x in guess]
+for i in range(10):
+    if guess[i] == card[i]:
+        print("yessssssssss", guess[i])
+    else:
+        print("noooooooooo", guess[i])
+
