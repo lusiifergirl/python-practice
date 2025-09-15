@@ -1,0 +1,10 @@
+import random
+with open("words.txt", "r") as f:
+    kalame = f.read().split()
+word = random.choice(kalame)
+print("avalin harf:", word[0])
+guess = input("enter your guess:")
+if guess == word:
+    print("yessss")
+else:
+    print("noo", word)
