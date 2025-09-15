@@ -1,0 +1,16 @@
+music = [("googosh","mordab"), ("ebi","gese eshgh"), ("lito","khoda be ma ye rolo dade bod")]
+singer = input("enter singer name: ")
+musicc = input("enter music name: ")
+for s, m in music:
+    if s == singer or m == musicc:
+        print(s, " , ", m)
+for s, m in music:
+    if s == singer or m != musicc:
+        print(s, " , ", m)
+for s, m in music:
+    if m != musicc or s == singer:
+        print(s, " , ", m)
+    else:
+        print("natayej peyda nashod")
+
+
