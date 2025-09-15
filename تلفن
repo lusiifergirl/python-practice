@@ -1,0 +1,10 @@
+dtelephone = {}
+name = input("enter name: ")
+number = input("enter number: ")
+dtelephone[name] = number
+print("daftarche telephone:")
+print(dtelephone)
+delete_name = input("esmi ke mikhay hazf she: ")
+dtelephone.pop(delete_name, None)
+search_name = input("search name: ")
+print(dtelephone.get(search_name, "not found"))
