@@ -1,0 +1,8 @@
+with open("test.txt", "r") as f:
+    text = f.read()
+    khat = text.splitlines()
+    vazhe = text.split()
+    character = len(text)
+print("khat:", len(khat))
+print("vazhe:", len(vazhe))
+print("character:", character)
