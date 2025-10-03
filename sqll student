@@ -1,0 +1,8 @@
+CREATE DATABASE school;
+USE school;
+CREATE TABLE students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    fullname VARCHAR(100),
+    grade INT,
+    city VARCHAR(100)
+);
