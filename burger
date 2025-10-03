@@ -1,0 +1,27 @@
+Python 3.13.1 (tags/v3.13.1:0671451, Dec  3 2024, 19:06:28) [MSC v.1942 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+import requests
+from bs4 import BeautifulSoup
+import random
+URL = "https://mayonnaiseburger.com/mayonnaiseburger"
+page = requests.get(URL)
+soup = BeautifulSoup(page.content, "html.parser")
+result = soup.find(id="products")
+food = result.find_all("p", class_="w3-bold w3-text-gray")
+price = result.find_all("div", class_="amount")
+print(" BURGER MYJ")
+print("answer the questions:\n")
+for i in range(0, 23):
+    item_name = food[i].text.strip()
+    item_price = price[i].text.strip()
+    fake_prices = [f"{int(item_price.replace('$','')) + j}$" for j in range(1, 4)]
+    options = fake_prices + [item_price]
+    random.shuffle(options)
+    if i == 0:
+        print("burger section:")
+    elif i == 15:
+        print("\n sauce section:")
+    print(f"\nquestion {i+1}: price «{item_name}» how nuch:")
+    for idx, opt in enumerate(options):
+        print(f"{chr(65+idx)}. {opt}")
+    print(f"(right answer: {item_price})")
