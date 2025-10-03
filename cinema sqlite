@@ -1,0 +1,11 @@
+import sqlite3
+try:
+    conn = sqlite3.connect('cinema.db')
+    c = conn.cursor()
+    c.execute('INSERT INTO movies (title, release_year, director, genre) VALUES (?, ?, ?, ?)',
+              ('Inception', 2010, 'Christopher Nolan', 'Science Fiction'))
+    conn.commit()
+except sqlite3.Error as e:
+    print(f"Database error: {e}")
+finally:
+    conn.close()
